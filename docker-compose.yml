@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  node:
+    image: node:14
+    container_name: node_app
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+      - REDIS_HOST=redis
+
+  mongo:
+    image: mongo:4.4
+    container_name: mongo_db
+    ports:
+      - '27017:27017'
+
+  redis:
+    image: redis:5.0
+    container_name: redis_server
+    ports:
+      - '6379:6379'
