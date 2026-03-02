@@ -1,0 +1,21 @@
+# Exclude the following files and directories
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore directory for tests
+/test/
+
+# Ignore git files
+/.git/
+
+# Ignore any .DS_Store files on Mac
+.DS_Store
+
+# Ignore any node_modules folder
+node_modules/
+
+# Add any other files or directories that you want to exclude from the Docker build
